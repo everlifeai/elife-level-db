@@ -18,9 +18,10 @@ function main() {
     })
 }
 
+const KEY = 'my-test-key-32732'
 function putTestValue(cb) {
     let val = Math.floor(Math.random()*100000)
-    client.send({ type: 'put', key:'my-test-val', val: val }, (err) => {
+    client.send({ type: 'put', key: KEY, val: val }, (err) => {
         if(err) cb(err)
         else {
             console.log('Put: ', val)
@@ -29,7 +30,8 @@ function putTestValue(cb) {
     })
 }
 
-function getTestValue() {
+function getTestValue(cb) {
+    client.send({ type: 'get', key: KEY }, cb)
 }
 
 main()

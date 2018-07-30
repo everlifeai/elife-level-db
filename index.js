@@ -22,4 +22,12 @@ dbService.on('put', (req, cb) => {
     else db.put(req.key, req.val, cb)
 })
 
+/*      outcome/
+ * Responds to a `get` request by getting values from the database
+ */
+dbService.on('get', (req, cb) => {
+    if(!req.key) cb('Need key to get from DB')
+    else db.get(req.key, cb)
+})
+
 
