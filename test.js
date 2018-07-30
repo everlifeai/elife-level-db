@@ -5,6 +5,9 @@ const client = new cote.Requester({
     key: 'everlife-db-svc',
 })
 
+/*      outcome/
+ * Simple put/get test
+ */
 function main() {
     putTestValue((err) => {
         if(err) console.error(err)
@@ -16,8 +19,13 @@ function main() {
 }
 
 function putTestValue(cb) {
-    client.send({ type: 'put', test:1}, (err,val) => {
-        console.log('sent:', err, val)
+    let val = Math.floor(Math.random()*100000)
+    client.send({ type: 'put', key:'my-test-val', val: val }, (err) => {
+        if(err) cb(err)
+        else {
+            console.log('Put: ', val)
+            cb()
+        }
     })
 }
 
