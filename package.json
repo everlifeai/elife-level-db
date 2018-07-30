@@ -1,0 +1,12 @@
+{
+  "name": "elife-level-db",
+  "version": "0.1.0",
+  "description": "Simple Storage for your Avatar",
+  "main": "index.js",
+  "author": "charles.lobo@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "cote": "^0.17.0",
+    "level": "^4.0.0"
+  }
+}
