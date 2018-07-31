@@ -23,3 +23,6 @@ client.send({ type: 'get', key: KEY }, (err,val) => {
 ...
 
 ```
+
+## TODO
+- Test for scaling/bottleneck issues
