@@ -2,8 +2,9 @@
 const cote = require('cote')({statusLogsEnabled:false})
 const level = require('level')
 const u = require('elife-utils')
+const path = require('path')
 
-u.ensureExists('/data/level.db', (err, dbdir) => {
+u.ensureExists(path.join(u.dataLoc(), 'level.db'), (err, dbdir) => {
     if(err) u.showErr(err)
     else startLevelDB(dbdir)
 })
