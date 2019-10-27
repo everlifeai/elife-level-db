@@ -1,7 +1,7 @@
 'use strict'
 const cote = require('cote')({statusLogsEnabled:false})
 const level = require('level')
-const u = require('elife-utils')
+const u = require('@elife/utils')
 const path = require('path')
 
 u.ensureExists(path.join(u.dataLoc(), 'level.db'), (err, dbdir) => {
