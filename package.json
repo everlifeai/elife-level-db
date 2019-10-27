@@ -6,8 +6,6 @@
   "author": "charles.lobo@gmail.com",
   "license": "MIT",
   "dependencies": {
-    "cote": "^0.17.0",
-    "elife-utils": "everlifeai/elife-utils",
     "level": "^4.0.0"
   }
 }
